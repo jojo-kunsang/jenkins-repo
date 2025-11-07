@@ -15,7 +15,7 @@ pipeline {
         stage('Deploy'){
             steps{
                 sh 'sudo rm -rf /var/www/darjeeling-cab-react/*'
-                sh 'sudo cp -r build /* /var/www/darjeeling-cab-react'
+                sh 'sudo cp -r dist /* /var/www/darjeeling-cab-react'
                 sh 'sudo systemctl restart nginx'
             }
         }
